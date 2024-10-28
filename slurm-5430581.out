@@ -1,0 +1,24 @@
+/home/gruenf/.conda/envs/chai-lab-long/lib/python3.10/site-packages/pandera/engines/pandas_engine.py:67: UserWarning: Using typeguard < 3. Generic types like List[TYPE], Dict[TYPE, TYPE] will only validate the first element in the collection.
+  warnings.warn(
+Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s]Loading checkpoint shards:  50%|█████     | 1/2 [00:00<00:00,  1.65it/s]Loading checkpoint shards: 100%|██████████| 2/2 [00:00<00:00,  2.80it/s]Loading checkpoint shards: 100%|██████████| 2/2 [00:00<00:00,  2.54it/s]
+/home/gruenf/.conda/envs/chai-lab-long/lib/python3.10/site-packages/torch/export/_unlift.py:58: UserWarning: Attempted to insert a get_attr Node with no underlying reference in the owning GraphModule! Call GraphModule.add_submodule to add the necessary submodule, GraphModule.add_parameter to add the necessary Parameter, or nn.Module.register_buffer to add the necessary buffer
+  getattr_node = gm.graph.get_attr(lifted_node)
+/home/gruenf/.conda/envs/chai-lab-long/lib/python3.10/site-packages/torch/fx/graph.py:1460: UserWarning: Node _lifted_tensor_constant0_1 target _lifted_tensor_constant0 _lifted_tensor_constant0 of  does not reference an nn.Module, nn.Parameter, or buffer, which is what 'get_attr' Nodes typically target
+  warnings.warn(f'Node {node} target {node.target} {atom} of {seen_qualname} does '
+/home/gruenf/.conda/envs/chai-lab-long/lib/python3.10/site-packages/torch/fx/graph.py:1460: UserWarning: Node _lifted_tensor_constant1_1 target _lifted_tensor_constant1 _lifted_tensor_constant1 of  does not reference an nn.Module, nn.Parameter, or buffer, which is what 'get_attr' Nodes typically target
+  warnings.warn(f'Node {node} target {node.target} {atom} of {seen_qualname} does '
+Traceback (most recent call last):
+  File "/home/gruenf/chai-lab-long-context/examples/predict_structure.py", line 70, in <module>
+    candidates = run_inference(
+  File "/home/gruenf/.conda/envs/chai-lab-long/lib/python3.10/site-packages/torch/utils/_contextlib.py", line 115, in decorate_context
+    return func(*args, **kwargs)
+  File "/home/gruenf/chai-lab-long-context/chai_lab/chai1.py", line 322, in run_inference
+    return run_folding_on_context(
+  File "/home/gruenf/.conda/envs/chai-lab-long/lib/python3.10/site-packages/torch/utils/_contextlib.py", line 115, in decorate_context
+    return func(*args, **kwargs)
+  File "/home/gruenf/chai-lab-long-context/chai_lab/chai1.py", line 425, in run_folding_on_context
+    embedded_features = feature_embedding.forward(**features)
+  File "<eval_with_key>.4", line 29, in forward
+  File "/home/gruenf/.conda/envs/chai-lab-long/lib/python3.10/site-packages/torch/_ops.py", line 594, in __call__
+    return self_._op(*args, **kwargs)
+RuntimeError: shape '[1, 47104, 260]' is invalid for input of size 14926080

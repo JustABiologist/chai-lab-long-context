@@ -407,7 +407,9 @@ def run_folding_on_context(
 
     # Model is size-specific
     model_size = min(x for x in AVAILABLE_MODEL_SIZES if n_actual_tokens <= x)
-
+    ###Hardcoded size to facilitate download!
+    model_size = "2048"
+    ###########################################
     feature_embedding = load_exported(f"{model_size}/feature_embedding.pt2", device)
     token_input_embedder = load_exported(
         f"{model_size}/token_input_embedder.pt2", device
